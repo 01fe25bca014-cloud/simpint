@@ -1,8 +1,6 @@
-def simInt(principal,interest,time):
-    return(principal* interest*time)/100
-if __name__ == "__main__":
-    p=int(input("Enter principal amount"))
-    i=int(input("Enter interest"))
-    t=int(input("Enter time"))
+from simple import simInt
 
-    print("Simple interest:",simInt(p,i,t))
+def test_simpleInt_pos():
+    assert simInt(20000,8,12) == 19200
+def test_simpleInt_zer():
+    assert simInt(10000,7,0) == 0
